@@ -3,7 +3,7 @@ import cors from 'cors';
 import {rutas} from './router/rutas.js';
 import {establecerConexion} from './database/conexion.js';
 export default class app{
-    
+    //
     constructor(){
         this.app = express();
         this.conectarBd();
