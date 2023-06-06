@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import {rutas} from './router/rutas.js';
 import {establecerConexion} from './database/conexion.js';
+var whitelist = ['https://api-hotel-m31b-nr7bgqzce-juantorres-dev.vercel.app/']
 export default class app{
     
     constructor(){
@@ -15,7 +16,7 @@ export default class app{
     }
 
     enrutarPeticiones(){
-        this.app.use(cors())
+        this.app.use(cors(whitelist))
         this.app.use(express.json());
         this.app.use('/',rutas);
     }
