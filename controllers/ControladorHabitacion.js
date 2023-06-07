@@ -20,7 +20,7 @@ export class ControladorHabitaciones {
               })
             }else{
               await servicioHabitacion.registrarHabitacion(datos)
-              respuesta.status(200).json({ 
+              res.status(200).json({ 
                 mensaje: "Succesfull, adding the data"
               })
             }
